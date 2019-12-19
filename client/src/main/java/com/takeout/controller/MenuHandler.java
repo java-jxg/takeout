@@ -31,7 +31,7 @@ public class MenuHandler {
     @GetMapping("/deleteById/{id}")
     public String deleteById(@PathVariable("id") long id){
         menuFeign.deleteById(id);
-        return "redirect:/menu/redirect/index";
+        return "redirect:/menu/redirect/menu_manage";
     }
 
     @GetMapping("/findTypes")
@@ -45,7 +45,7 @@ public class MenuHandler {
     @PostMapping("/save")
     public String save(Menu menu){
         menuFeign.save(menu);
-        return "redirect:/menu/redirect/index";
+        return "redirect:/menu/redirect/menu_manage";
     }
 
     @GetMapping("/findById/{id}")
@@ -60,7 +60,7 @@ public class MenuHandler {
     @PostMapping("/update")
     public String update(Menu menu){
         menuFeign.update(menu);
-        return "redirect:/menu/redirect/index";
+        return "redirect:/menu/redirect/menu_manage";
     }
 
 

@@ -1,2 +1,20 @@
 server:
   port: 8010
+spring:
+  application:
+    name: order
+  datasource:
+    name: orderingsystem
+    url: jdbc:mysql://localhost:3306/orderingsystem?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaltZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.takeout.entity
